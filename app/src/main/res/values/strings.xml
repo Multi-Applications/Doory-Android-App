@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Doory</string>
+    <string name="app_developer">Multi Application</string>
+
+    <string name="load_error">Doory could not be loaded.</string>
+    <string name="choose_file">Choose file</string>
+    <string name="external_open_failed">Could not open link.</string>
+    <string name="saved_to_downloads">Saved to Downloads/Doory/%1$s</string>
+    <string name="download_failed">Download failed: %1$s</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="storage_permission_denied">Without storage permission, the file cannot be saved to Downloads.</string>
+
+    <string name="update_checking">Checking for updates…</string>
+    <string name="update_none">Doory is up to date (%1$s).</string>
+    <string name="update_offline">No internet connection. Update check is not possible right now.</string>
+    <string name="update_failed">Update check failed: %1$s</string>
+    <string name="update_busy">An update check is already running.</string>
+    <string name="update_ready_title">Web update downloaded</string>
+    <string name="update_ready_message">The web app %1$s was downloaded from the official Doory GitHub source. Your drafts and settings will be preserved. Reload now?</string>
+    <string name="update_reload">Reload now</string>
+    <string name="update_later">Later</string>
+    <string name="update_deferred">Update %1$s will be used on the next start.</string>
+
+    <string name="shortcut_new_short">New Design</string>
+    <string name="shortcut_new_long">Create a new Doory design</string>
+    <string name="shortcut_dashboard_short">Dashboard</string>
+    <string name="shortcut_dashboard_long">Open your Doory dashboard</string>
+    <string name="shortcut_templates_short">Templates</string>
+    <string name="shortcut_templates_long">Browse Doory templates</string>
+</resources>

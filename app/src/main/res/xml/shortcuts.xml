@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutId="new_design"
+        android:shortcutLongLabel="@string/shortcut_new_long"
+        android:shortcutShortLabel="@string/shortcut_new_short">
+        <intent
+            android:action="de.multiapplications.doory.NEW_DESIGN"
+            android:targetClass="de.multiapplications.doory.MainActivity"
+            android:targetPackage="de.multiapplications.doory" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutId="dashboard"
+        android:shortcutLongLabel="@string/shortcut_dashboard_long"
+        android:shortcutShortLabel="@string/shortcut_dashboard_short">
+        <intent
+            android:action="de.multiapplications.doory.DASHBOARD"
+            android:targetClass="de.multiapplications.doory.MainActivity"
+            android:targetPackage="de.multiapplications.doory" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutId="templates"
+        android:shortcutLongLabel="@string/shortcut_templates_long"
+        android:shortcutShortLabel="@string/shortcut_templates_short">
+        <intent
+            android:action="de.multiapplications.doory.TEMPLATES"
+            android:targetClass="de.multiapplications.doory.MainActivity"
+            android:targetPackage="de.multiapplications.doory" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+</shortcuts>

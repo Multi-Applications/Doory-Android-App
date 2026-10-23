@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="doory_background">#F9F7FF</color>
+    <color name="doory_ink">#221F2E</color>
+    <color name="doory_accent">#6D4AFF</color>
+    <color name="ic_launcher_background">#D6C8FF</color>
+</resources>

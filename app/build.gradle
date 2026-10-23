@@ -1,0 +1,77 @@
+plugins {
+    id 'com.android.application'
+}
+
+def keystorePropertiesFile = file(System.getenv('DOORY_KEYSTORE_PROPERTIES')
+        ?: "${System.properties['user.home']}/.doory/keystore.properties")
+def keystoreProperties = new Properties()
+def hasReleaseKeystore = keystorePropertiesFile.isFile()
+if (hasReleaseKeystore) {
+    keystorePropertiesFile.withInputStream { keystoreProperties.load(it) }
+}
+
+android {
+    namespace 'de.multiapplications.doory'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "de.multiapplications.doory"
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        resConfigs "de", "en"
+    }
+
+    signingConfigs {
+        if (hasReleaseKeystore) {
+            release {
+                storeFile file(keystoreProperties['storeFile'])
+                storePassword keystoreProperties['storePassword']
+                keyAlias keystoreProperties['keyAlias']
+                keyPassword keystoreProperties['keyPassword']
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            if (hasReleaseKeystore) {
+                signingConfig signingConfigs.release
+            }
+            debuggable false
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    androidResources {
+        noCompress += ['wasm']
+    }
+
+    packaging {
+        resources {
+            excludes += [
+                'META-INF/*.kotlin_module',
+                'META-INF/AL2.0',
+                'META-INF/LGPL2.1'
+            ]
+        }
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    implementation 'org.apache.commons:commons-compress:1.27.1'
+}

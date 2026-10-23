@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Doory" parent="Theme.Doory.Base">
+        <item name="android:windowSplashScreenBackground">@color/doory_background</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/doory_background</item>
+    </style>
+
+</resources>
